@@ -20,6 +20,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: 'HomePage' },
       { title: 'Servicos', component: 'ListarServicosPage' },
+      { title: 'Forma de Pagamento', component: 'ListPagamentosPage' },
     ];
 
   }

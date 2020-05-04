@@ -1,9 +1,82 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Serviços</ion-title>
+    <ion-title>Registrar Serviço</ion-title>
+    <ion-buttons start>
+      <button ion-button icon only (click)="cadastrar()">
+
+        <ion-icon color="#019386" name="checkmark"></ion-icon>
+
+      </button>
+
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+
+        <ion-item>
+          <ion-input placeholder="Nome" [(ngModel)]="nome" type="text"></ion-input>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+
+        <ion-item>
+          <ion-input placeholder="Preco de Custo" [(ngModel)]="preco" type="text"></ion-input>
+        </ion-item>
+
+      </ion-col>
+      <ion-col col-6>
+
+        <ion-item>
+          <ion-input placeholder="Preço Promoção" [(ngModel)]="preco_promo" type="text"></ion-input>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+
+
+        <ion-list>
+          <ion-item>
+            <ion-label style="font-size: 13px !important;">Forma de Pagamento</ion-label>
+            <ion-select [(ngModel)]="pagamentos_id">
+
+              <ion-option *ngFor="let item of pagamentos;" value="{{item.id}}">{{item.descricao}}</ion-option>
+
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-12>
+
+        <ion-item>
+          <ion-textarea placeholder="Faça uma Breve descrição" [(ngModel)]="descricao" name="descricao"
+            autocomplete="on" autocorrect="on"></ion-textarea>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+
+
+
+
+  </ion-grid>
+
 
 </ion-content>

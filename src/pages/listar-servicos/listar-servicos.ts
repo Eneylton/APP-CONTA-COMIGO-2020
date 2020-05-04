@@ -9,6 +9,8 @@ import { LoadingController } from 'ionic-angular';
   selector: 'page-listar-servicos',
   templateUrl: 'listar-servicos.html',
 })
+
+
 export class ListarServicosPage {
 
   servicos: any = [];
@@ -46,14 +48,19 @@ export class ListarServicosPage {
           id: item.id,
           nome: item.nome,
           preco: item.preco,
-          preco_vista: item.preco_vista,
+          preco_promo: item.preco_promo,
           descricao: item.descricao,
           data: item.data
         })
       }
-
+      
       loader.dismiss();
+
     })
+  }
+
+  openCadServicos(){
+    this.navCtrl.push('CadServicosPage');
   }
 
 }

@@ -55,8 +55,8 @@ export class HomePage {
         })
         
         
-        loader.dismiss();
       }
+      loader.dismiss();
       
     })
  
